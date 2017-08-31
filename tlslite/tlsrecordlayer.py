@@ -428,6 +428,8 @@ class TLSRecordLayer(object):
             return "TLS 1.1"
         elif self.version == (3,3):
             return "TLS 1.2"
+        elif self.version > (3, 3):
+            return "TLS 1.3"
         else:
             return None
 
